@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace DopplerHub;
+namespace DopplrHub;
 
 final class ToolsClient
 {
-    public function __construct(private readonly DopplerHub $client)
+    public function __construct(private readonly DopplrHub $client)
     {
     }
 

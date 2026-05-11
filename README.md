@@ -1,6 +1,6 @@
-# DopplerHub PHP SDK
+# DopplrHub PHP SDK
 
-A chainable PHP SDK for the current DopplerHub public API, including generic conversions, tools, and utility endpoints.
+A chainable PHP SDK for the current DopplrHub public API, including generic conversions, tools, and utility endpoints.
 
 ## Install
 
@@ -24,9 +24,9 @@ If you want to distribute the SDK directly from the backend, this workspace now 
 
 require __DIR__ . '/vendor/autoload.php';
 
-use DopplerHub\DopplerHub;
+use DopplrHub\DopplrHub;
 
-$api = new DopplerHub('YOUR_API_KEY', 'https://api.dopplrhub.com/api/v1');
+$api = new DopplrHub('YOUR_API_KEY', 'https://api.dopplrhub.com/api/v1');
 
 $api->start('./input.pdf', 'jpg')
     ->wait()
@@ -41,9 +41,9 @@ $api->start('./input.pdf', 'jpg')
 
 require __DIR__ . '/vendor/autoload.php';
 
-use DopplerHub\DopplerHub;
+use DopplrHub\DopplrHub;
 
-$api = new DopplerHub('YOUR_API_KEY', 'https://api.dopplrhub.com/api/v1');
+$api = new DopplrHub('YOUR_API_KEY', 'https://api.dopplrhub.com/api/v1');
 
 $api->startFromURL('https://example.com/brochure.pdf', 'png')
     ->wait()
@@ -58,9 +58,9 @@ $api->startFromURL('https://example.com/brochure.pdf', 'png')
 
 require __DIR__ . '/vendor/autoload.php';
 
-use DopplerHub\DopplerHub;
+use DopplrHub\DopplrHub;
 
-$api = new DopplerHub('YOUR_API_KEY', 'https://api.dopplrhub.com/api/v1');
+$api = new DopplrHub('YOUR_API_KEY', 'https://api.dopplrhub.com/api/v1');
 
 $api->tools()->ocr('./scan.pdf', 'ocr-docx', ['language' => 'eng'])
     ->wait()
@@ -114,9 +114,9 @@ Tool coverage in the PHP SDK includes `ocr()`, `pdf()`, `image()`, `video()`, `a
 
 require __DIR__ . '/vendor/autoload.php';
 
-use DopplerHub\DopplerHub;
+use DopplrHub\DopplrHub;
 
-$api = new DopplerHub('YOUR_API_KEY', 'https://api.dopplrhub.com/api/v1');
+$api = new DopplrHub('YOUR_API_KEY', 'https://api.dopplrhub.com/api/v1');
 
 $formats = $api->utilities()->supportedFormats();
 $rates = $api->utilities()->currencyRates('USD');
@@ -125,7 +125,7 @@ $api->utilities()->batchDownload(['JOB_ID_1', 'JOB_ID_2'], './converted_files.zi
 
 ## Important behavior note
 
-`startFromURL()` currently downloads the remote resource first, then uploads it into DopplerHub.
+`startFromURL()` currently downloads the remote resource first, then uploads it into DopplrHub.
 It does not perform headless browser webpage rendering.
 
 That means this shape is ready today for remote files like PDF, DOCX, TXT, and other downloadable assets. A call like `startFromURL('http://google.com/', 'png')` would require a backend webpage-render route that does not exist in the current API yet.

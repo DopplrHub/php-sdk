@@ -1,6 +1,6 @@
 {
   "name": "dopplrhub/php-sdk",
-  "description": "PHP SDK for the DopplerHub file conversion API",
+  "description": "PHP SDK for the DopplrHub file conversion API",
   "type": "library",
   "license": "proprietary",
   "require": {
@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "DopplerHub\\": "src/"
+      "DopplrHub\\": "src/"
     }
   }
 }

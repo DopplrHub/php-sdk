@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace DopplerHub;
+namespace DopplrHub;
 
 final class ImmediateResult
 {
     public function __construct(
-        private readonly DopplerHub $client,
+        private readonly DopplrHub $client,
         private readonly array $payload,
         private readonly string $downloadUrlField,
         private readonly ?string $downloadKeyField = null,

@@ -9,12 +9,12 @@ class ComposerStaticInitbf4ae55b1620acf89f7dd945f7475002
     public static $prefixLengthsPsr4 = array (
         'D' =>
         array (
-            'DopplerHub\\' => 11,
+            'DopplrHub\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'DopplerHub\\' =>
+        'DopplrHub\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

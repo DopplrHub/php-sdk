@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-use DopplerHub\DopplerHub;
+use DopplrHub\DopplrHub;
 
-$api = new DopplerHub(
+$api = new DopplrHub(
     getenv('DOPPLERHUB_API_KEY') ?: 'YOUR_API_KEY',
     getenv('DOPPLERHUB_BASE_URL') ?: 'https://api.dopplrhub.com/api/v1'
 );

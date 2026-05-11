@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DopplerHub;
+namespace DopplrHub;
 
 final class ApiException extends \RuntimeException
 {

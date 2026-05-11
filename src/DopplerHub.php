@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace DopplerHub;
+namespace DopplrHub;
 
 use CURLFile;
 
-final class DopplerHub
+final class DopplrHub
 {
     private string $baseUrl;
     private ?ToolsClient $toolsClient = null;

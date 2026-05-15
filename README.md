@@ -91,9 +91,17 @@ $api->tools()->ats('./resume.pdf', 'Senior PHP engineer with API design experien
 $api->tools()->archive(['./a.txt', './b.txt'], 'zip', [
     'archiveName' => 'documents',
 ])->wait()->download('./documents.zip');
+
+$api->tools()->socialResize('./hero.png', 'instagram', ['post-square', 'story'], [
+    'outputFormat' => 'jpg',
+])->wait()->download('./hero-instagram.zip');
+
+$api->tools()->atsReexport($report, 'modern', [
+    'downloadAs' => 'resume-modern.docx',
+])->download('./resume-modern.docx');
 ```
 
-Tool coverage in the PHP SDK includes `ocr()`, `pdf()`, `image()`, `video()`, `ada()`, `ats()`, `atsReexport()`, and `archive()` on `$api->tools()`.
+Tool coverage in the PHP SDK includes `ocr()`, `pdf()`, `image()`, `video()`, `ada()`, `ats()`, `atsReexport()`, `archive()`, and `socialResize()` on `$api->tools()`.
 
 ## Examples
 
